@@ -25,7 +25,7 @@ describe('extractDataAttrProps', () => {
       color: '#FFF',
       width: 100,
     }}                        | ${{}}
-    
+
     ${null}                   | ${{}}
     ${undefined}              | ${{}}
   `('should return value $expected on $input', ({input, expected}) => {

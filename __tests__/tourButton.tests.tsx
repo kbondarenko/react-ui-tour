@@ -9,4 +9,4 @@ describe('TourButton', () => {
     expect(wrapper.find('*[data-tid="button-tid"]').hostNodes().length).toBe(1)
     expect(wrapper.find('*[data-index="1"]').hostNodes().length).toBe(1)
   })
-})
+});

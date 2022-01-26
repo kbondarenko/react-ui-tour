@@ -15,4 +15,4 @@ describe('Tooltip', () => {
     expect(wrapper.find('*[data-tid="some-tid"]').length).toBe(1)
     expect(wrapper.find('*[data-index="1"]').length).toBe(1)
   })
-})
+});

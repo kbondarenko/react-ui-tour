@@ -50,6 +50,7 @@ export class Tooltip extends React.Component<TooltipProps> {
     if (!this.state.hasElem) return <span />;
     const positions: PopupPosition[] = this.props.positions as PopupPosition[];
     const dataAttrProps = extractDataAttrProps(this.props)
+
     return (
       <RenderLayer onClickOutside={this.props.onClose} onFocusOutside={() => {}} active>
         <Popup
