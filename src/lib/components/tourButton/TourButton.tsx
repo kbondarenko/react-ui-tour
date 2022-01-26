@@ -19,7 +19,7 @@ export function TourButton(props: TourButtonProps) {
     }`;
   }
 
-  const dataAttrProps = extractDataAttrProps(this.props)
+  const dataAttrProps = extractDataAttrProps(props)
 
   return (
     <div style={{ display: 'inline-block' }}>
