@@ -2,6 +2,8 @@ import * as React from "react";
 import { Popup, PopupPosition } from "@skbkontur/react-ui/internal/Popup";
 import { RenderLayer } from "@skbkontur/react-ui/internal/RenderLayer";
 import styles from "./Tooltip.less";
+import {extractDataAttrProps} from '../../helpers/extractDataAttrProps';
+import {DataAttrProps} from '../DataAttrProps';
 
 export interface PinOptions {
   hasPin?: boolean;
@@ -11,7 +13,7 @@ export interface PinOptions {
 
 export type TooltipPartElement = React.ReactElement<any> | React.ReactText;
 
-export interface TooltipProps {
+export interface TooltipProps extends DataAttrProps {
   targetGetter: () => Element;
   positions?: string[];
   offset?: number;
@@ -47,9 +49,11 @@ export class Tooltip extends React.Component<TooltipProps> {
   render() {
     if (!this.state.hasElem) return <span />;
     const positions: PopupPosition[] = this.props.positions as PopupPosition[];
+    const dataAttrProps = extractDataAttrProps(this.props)
     return (
       <RenderLayer onClickOutside={this.props.onClose} onFocusOutside={() => {}} active>
         <Popup
+          {...dataAttrProps}
           anchorElement={this.props.targetGetter()}
           positions={positions}
           margin={this.props.offset}

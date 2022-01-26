@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styles from './TourButton.less';
+import {DataAttrProps} from '../DataAttrProps';
+import {extractDataAttrProps} from '../../helpers/extractDataAttrProps';
 
-export interface TourButtonProps {
+export interface TourButtonProps extends DataAttrProps {
   color: string;
   arrow?: string;
   style?: Object;
@@ -17,9 +19,11 @@ export function TourButton(props: TourButtonProps) {
     }`;
   }
 
+  const dataAttrProps = extractDataAttrProps(this.props)
+
   return (
     <div style={{ display: 'inline-block' }}>
-      <button style={props.style} className={className} onClick={props.onClick}>
+      <button {...dataAttrProps} style={props.style} className={className} onClick={props.onClick}>
         <div style={{ position: 'relative' }}>{props.children}</div>
       </button>
     </div>
