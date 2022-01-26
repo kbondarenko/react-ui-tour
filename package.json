@@ -19,8 +19,8 @@
     "build-storybook": "build-storybook --no-dll"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.2",
     "@skbkontur/react-ui": ">=2 <4",
+    "prop-types": "^15.6.2",
     "react": ">=16.9 <17",
     "react-dom": ">=16.9 <17"
   },
@@ -35,7 +35,7 @@
     "@storybook/react": "^6.0.28",
     "@types/enzyme": "^3.1.6",
     "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/jest": "^21.1.8",
+    "@types/jest": "^26.0.24",
     "@types/node": "^14.14.5",
     "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.53",
